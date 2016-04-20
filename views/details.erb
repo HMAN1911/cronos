@@ -1,0 +1,15 @@
+<header>
+  <section>
+    <h1 class="clipped" style="font-size: 3rem;"><a href="/">GAdb</a></h1>
+  </section>
+</header>
+
+<header id="searcher">
+  <form action="/results">
+    <input class="form-control" type="text" name="movie_name" class="style-4">
+  </form>
+</header>
+
+<h2 id="priceDisplay"><%=@movie_title %></h2>
+<img src="<%=@movie_poster %>" alt="" />
+<p><%= @movie_db %></p>

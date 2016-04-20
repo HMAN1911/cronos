@@ -1,0 +1,26 @@
+<header>
+  <section>
+    <h1 class="clipped" style="font-size: 3rem;"><a href="/">GAdb</a></h1>
+  </section>
+</header>
+
+<header id="searcher">
+  <form action="/results">
+    <input class="form-control" type="text" name="event_name" class="style-4">
+  </form>
+</header>
+
+<div class="list">
+  <% @search_results["Search"].each do | result | %>
+
+  <div class="card">
+    <img src="<%=result['Poster']%>" alt="">
+    <h1>
+      <a href="<%='/details?movie_name=' + result['Title']%>"><%= result["Title"]%><span class="year-heading">(<%=result['Year']%>)</span>
+    </a>
+  </h1>
+    <h3><a href="<%='http://www.imdb.com/title/' + result["imdbID"]%>"><i class="fa fa-database"></i> imdb </a></h3>
+  </div>
+
+  <% end %>
+</div>

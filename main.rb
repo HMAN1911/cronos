@@ -1,6 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
-require 'httparty'
+# require 'sinatra/reloader'
 require './db_config'
 require 'active_record'
 require 'pg'

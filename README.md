@@ -1,27 +1,3 @@
-used timestamptz to create timezone-aware time entries.
-
-### observations
-
-It is not a Date object, neither is it a time Object. It is a ActiveSupport::TimeWithZone object. One important thing is I need to do a `require 'Date'` for this to work.
-
-We reach a fork in the road here. I think I fully grasp how it works. It looks like saving the time into the database even with time information still eventually 'sanitises' the entry back to UTC. This is actually a good thing. It allows a client to give their 'local' time, and the database will adjust that to UTC on its own, accounting for the time difference. That being said, Once the data is committed, the timezone information is lost.
-
-With the example above, the server commits the time as `2016-04-18 09:23:50 UTC`.
-
-If we run a `.in_time_zone('Wellington')`, this nicely displays the time again in the format we want:
-
-```
-Mon, 18 Apr 2016 21:23:50 NZST +12:00
-```
-
-The real question here is, do we need to record timezone information in a separate column? If we really wanted to take it a step further, the ideal model would be to have a separate time zone table, storing both the abbreviated time zone 'NZST', and the full reference to it 'Wellington'.
-
----
-
-## Database Structure
-
-Eventually, I need many-to-many mapping on events and users. But for this initial version, I will limit it to one user has many events.
-
 ### Phase 1
 
 tables: Users, Events, Clients
@@ -39,27 +15,17 @@ https://developers.google.com/identity/sign-in/web/sign-in#specify_your_apps_cli
 
 ## Front-End libraries
 
-Awesome looking progress bar:
+progress bar:
 http://ricostacruz.com/nprogress/
 
-Super clean and functional date / time pickers:
+clean and functional date / time pickers:
 https://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs
 
 another decent-looking option:
 http://amsul.ca/pickadate.js/
 
-looks like we need to include JQuery, for bootstrap and probably the date-pickers.
-
 how to do a post request with JQuery:
 http://api.jquery.com/jquery.post/
-
-
-
-
-
-
-
-
 
 
 ### Other Notes

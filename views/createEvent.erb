@@ -1,47 +1,22 @@
-  <body>
-    <header class="bar bar-nav">
-      <a class="icon icon-refresh pull-right"></a>
-      <h1 class="title">New Event</h1>
-    </header>
-
-    <div class="bar bar-footer">
-      <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
-          <span class="icon icon-home"></span>
-          <span class="tab-label">Home</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon icon-person"></span>
-          <span class="tab-label">Profile</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon icon-star-filled"></span>
-          <span class="tab-label">Favorites</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon icon-search"></span>
-          <span class="tab-label">Search</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon icon-gear"></span>
-          <span class="tab-label">Settings</span>
-        </a>
-      </nav>
-    </div>
-
-    <div class="content">
-
+<body>
+  <header class="bar bar-nav">
+    <a href="/" data-ignore="push" class="icon icon-left-nav pull-left"></a>
+    <h1 class="title">New Event</h1>
+  </header>
+  <div class="content">
     <form class="input-group">
       <input id="event_name" type="text" placeholder="Event Name">
-      <input id="date_entry" type="date" placeholder="Username">
-      <input id="time_entry" type="time" placeholder="Username">
+      <ul class="table-view-cell table-view-divider">
+        Start Time
+      </ul>
+      <input id="start_date_entry" type="date" value="<%= DateTime.now.to_time.to_date.to_s %>">
+      <input id="start_time_entry" type="time" value="<%= Time.new.strftime('%H:%M') %>">
+      <ul class="table-view-cell table-view-divider">
+        End Time
+      </ul>
+      <input id="end_date_entry" type="date" value="<%= DateTime.now.to_time.to_date.to_s %>">
+      <input id="end_time_entry" type="time">
+      <button id="new_event" class="btn btn-positive btn-block">Create Event</button>
     </form>
-
-  <ul class="table-view">
-    <li class="table-view-cell"> 
-    <button id="new_event" class="btn btn-primary btn-block">Create Event</button></li>
-  </ul>
-
   </body>
-
-<script type="text/javascript" src="/javascripts/dateHandler.js"></script>
+  <script type="text/javascript" src="/javascripts/dateHandler.js"></script>

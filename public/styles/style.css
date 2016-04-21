@@ -1,207 +1,50 @@
-
 body {
-  width: 100%;
+  width: 375px;
   margin: 0 auto;
   text-align: center;
   background-color: rgb(245, 245, 245);
 }
 
-#searcher {
-  margin: 25px;
-  position: relative;
+.bar-footer {
+  /* position: relative; */
+  bottom: -150px;
 }
 
-.clipped {
-  color: #fff;
-  font-size: 7rem;
-  font-weight: bold;
-  font-family: Helvetica;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+.bar {
+  width: 375px;
+  right: auto;
+  left: auto;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.clipped > a,
-.clipped > a:hover {
-  transition: none;
-  color: #fff;
+
+
+.login-splash {
+background: -moz-linear-gradient(top,  #222524 0%, #81efe8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #222524 0%,#81efe8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #222524 0%,#00586b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6525ba', endColorstr='#81efe8',GradientType=0 ); /* IE6-9 */
+
 }
 
-h1 {
-  font-size: 1.7rem;
-  color: rgb(47, 47, 47);
+.logo {
+  height: 150px;
+  margin-bottom: 2em;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(47, 47, 47);
-  transition: color ease-in-out .15s
-}
-
-a:hover {
-  color: #e3695f;
-}
-
-.list {
-  min-width: 500px;
-  max-width: 40vw;
-  margin: 0 auto;
-  border: 1px solid #e0e0e0;
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-}
-
-.year-heading {
-  font-size: 0.9rem;
-  color: rgb(112, 112, 112);
-  vertical-align: text-top;
-}
-
-.card {
-  height: 25vh;
-  text-align: left;
-  background-color: #fff;
-  line-height: 1.5rem;
-  padding: 10px 20px;
-  border-bottom: 1px solid #e0e0e0;
-  transition: background-color ease-in-out .15s;
-}
-
-.card h1 {
-  margin-bottom: 50px;
-  padding-left: 20px;
-}
-
-.card span {
-  padding-left: 10px;
-}
-
-.card h3 {
-  padding-left: 20px;
-}
-
-.card > img {
-  margin-right: 20px;
-  margin-top: 15px;
-  height: 85%;
-  float: right;
-  -webkit-box-shadow: 0px 1px 5px 1px rgba(168,168,168,1);
-  -moz-box-shadow: 0px 1px 5px 1px rgba(168,168,168,1);
-  box-shadow: 0px 1px 5px 1px rgba(168,168,168,1);
-}
-
-.card:hover {
-  background-color: rgba(200, 200, 200, 0.15);
-}
-
-.form-control {
-  margin-bottom: 15px auto;
-  display: inline-block;
-  min-width: 20vw;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 2rem;
-  color: #555555;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-
-.form-control:focus {
-  border-color: rgba(233, 103, 103, 0.6);
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 103, 103, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 103, 103, 0.6);
-}
-
-.special-btn {
-  position: relative;
-  display: inline-block;
-  padding: 0.4em 1em;
-  border: 1px solid #e3695f;
-  margin: 10px 0 10px;
-  color: #fff;
-  background: #e3695f;
-  border-radius: 4px;
-  font-size: 1.5em;
+.login-splash input[type=text],
+.login-splash input[type=password] {
+  height: 3em;
+  transition: 0.5s;
   text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
+  background-color: rgba(0,0,0,.1);
+  border: 0;
+  border-radius: 6px;
+  color: white;
 }
 
-.special-btn:active {
-  border-color: rgba(233, 103, 103, 0.6);
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 103, 103, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 103, 103, 0.6);
+.login-splash input[type=text]:focus,
+.login-splash input[type=password]:focus {
+  background-color: rgba(0,0,0,.4);
 }
-
-.special-btn:focus {
-  outline: 0;
-}
-
-footer {
-  margin-top: 100px;
-  padding-bottom: 30px;
-}
-
-/*
-pretty cool alternate button style
-http://enjoycss.com/gallery/*/
-
-/*
-.button {
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 150px;
-  height: 42px;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 0 20px;
-  overflow: hidden;
-  border: none;
-  -webkit-border-radius: 21px;
-  border-radius: 21px;
-  font: normal 20px/normal "Antic", Helvetica, sans-serif;
-  color: rgba(140,140,140,1);
-  text-decoration: normal;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: rgba(40,40,40,0.4);
-  -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
-  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
-  -webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}
-
-.button:hover {
-  color: rgba(181,181,181,1);
-  background: rgba(0,0,0,0.4);
-  -webkit-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}
-
-.button:focus {
-  width: 213px;
-  cursor: default;
-  padding: -13px 20px 0;
-  color: rgba(255,255,255,1);
-  -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}*/

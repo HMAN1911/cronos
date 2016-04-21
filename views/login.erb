@@ -1,4 +1,12 @@
-<form action="/session" method="post">
-  <input type="email" name="username"></input>
-  <input type="password" name="password"></input>
-</form>
+<div class="content login-splash">
+  <form style="width: 90%; margin: 0 auto; margin-top: 20vh;" action="/session" method="post">
+    <img class="logo" src="/images/Button-Fill-Black-Large.png">
+    <h3 style="margin-bottom: 2em; color: white;">Cronos</h3>
+    <div class="content-padded">
+      <p><%= session[:attempt] ? 'Incorrect username or password, try again.' : nil %></p>
+    </div>
+    <input type="text" name="username" placeholder="username"></input>
+    <input type="password" name="password" placeholder="password"></input>
+    <button class="btn btn-positive btn-block">Login</button>
+  </form>
+</div>

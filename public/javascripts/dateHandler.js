@@ -15,7 +15,7 @@ $(document).ready(function() {
                         create_time: now.unix() + '',
                         event_name: document.getElementById('event_name').value
                       },
-      function(result) { 
+      function(result) {
         window.location = '/';
     });
   })

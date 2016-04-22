@@ -37,6 +37,18 @@ helpers do
 end
 
 get '/' do
+
+  if User.all.size = 0
+    a = User.new
+    a.username = 'chump'
+    a.password = 'secret'
+    a.save
+    b = User.new
+    b.username = 'cronos'
+    b.password = 'test'
+    b.save
+  end
+
   if session[:user_id] == nil
     erb :login
   else

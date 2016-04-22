@@ -1,6 +1,7 @@
 create table events (
   id serial4 primary key,
   start_time timestamptz,
+  event_name varchar(50),
   end_time timestamptz,
   create_time timestamptz,
   user_id integer

@@ -109,14 +109,14 @@ end
 
 post '/results' do
   e = Event.new
-  start_epoch = params[:start_time]
-  end_epoch = params[:end_time]
-  timestamp = params[:create_time]
-  e.event_name = params[:event_name]
-  e.start_time = DateTime.strptime(start_epoch, '%s')
-  e.end_time = DateTime.strptime(end_epoch, '%s')
-  e.create_time = DateTime.strptime(timestamp, '%s')
-  e.user_id = session[:user_id]
+  # start_epoch = params[:start_time]
+  # end_epoch = params[:end_time]
+  # timestamp = params[:create_time]
+  # e.event_name = params[:event_name]
+  # e.start_time = DateTime.strptime(start_epoch, '%s')
+  # e.end_time = DateTime.strptime(end_epoch, '%s')
+  # e.create_time = DateTime.strptime(timestamp, '%s')
+  # e.user_id = session[:user_id]
   e.save
 end
 

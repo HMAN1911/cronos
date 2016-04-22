@@ -5,7 +5,7 @@ require 'active_record'
 require 'pg'
 require './models/event'
 require './models/user'
-require 'Date'
+require 'date'
 
 after do
   ActiveRecord::Base.connection.close

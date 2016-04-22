@@ -10,7 +10,7 @@ $(document).ready(function() {
     var mom = moment(dateTime, "YYYY-MM-DD HH:mm");
     var mom2 = moment(dateTime2, "YYYY-MM-DD HH:mm");
     var now = new moment;
-    $.post("results", { start_time: mom.unix() + '',
+    $.post("/results", { start_time: mom.unix() + '',
                         end_time  : mom2.unix() + '',
                         create_time: now.unix() + '',
                         event_name: document.getElementById('event_name').value

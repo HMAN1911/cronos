@@ -38,7 +38,7 @@ end
 
 get '/' do
 
-  if User.all.size = 0
+  if User.all.size == 0
     a = User.new
     a.username = 'chump'
     a.password = 'secret'
